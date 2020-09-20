@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: h3rk4nd/performance
+    - image: halilerkan/performance
       context: performance
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: h3rk4nd/client
+    - image: halilerkan/client
       context: client
       docker:
         dockerfile: Dockerfile
