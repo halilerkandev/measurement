@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './wrapper';","map":{"version":3,"sources":["/Users/erkan/trendyol/measurement/client/components/footer/styled/index.js"],"names":[],"mappings":"AAAA,cAAc,WAAd","sourcesContent":["export * from './wrapper';\n"]},"metadata":{},"sourceType":"module"}

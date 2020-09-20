@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: performance-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: performance
+  template:
+    metadata:
+      labels:
+        app: performance
+    spec:
+      containers:
+        - name: performance
+          image: h3rk4nd/performance
+          env:
+            - name: MONGO_URI
+              value: 'mongodb://performance-mongo-srv:27017/performance'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: performance-srv
+spec:
+  selector:
+    app: performance
+  ports:
+    - name: performance
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
