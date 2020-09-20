@@ -1,12 +1,13 @@
 name: tests-performance
 
 on:
-  pull_request
-  
+  pull_request:
+    paths:
+      - 'performance/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: cd performance && npm install && npm run test:ci
-    
