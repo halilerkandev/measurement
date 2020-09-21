@@ -15,7 +15,7 @@ const IndexPage = (props) => {
   const [{ metrics }, dispatch] = useMetrics();
 
   const handleMetrics = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       dispatch({
         type: metricsActionTypes.SET_METRICS_FROM_PROPS,
         payload: props.metrics,
