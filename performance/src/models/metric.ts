@@ -7,7 +7,6 @@ export interface IMetricDocument extends mongoose.Document {
   metricId: string;
   isFinal: boolean;
   entry?: PerformanceEntry;
-  createdAt?: Date;
 }
 
 export interface IMetricInput {
@@ -17,7 +16,6 @@ export interface IMetricInput {
   metricId: IMetricDocument['metricId'];
   isFinal: IMetricDocument['isFinal'];
   entry?: IMetricDocument['entry'];
-  createdAt?: IMetricDocument['createdAt'];
 }
 
 interface IMetricModel extends mongoose.Model<IMetricDocument> {}

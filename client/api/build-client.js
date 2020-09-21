@@ -1,20 +1,18 @@
 import axios from 'axios';
 
-// DEV
-// baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local'
-
-const buildClient = ({ req }) => {
+export default ({ req }) => {
   if (typeof window === 'undefined') {
+    // We are on the server
+
     return axios.create({
-      baseURL: 'http://www.measurement-app-prod.site/',
+      baseURL:
+        'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
       headers: req.headers,
     });
   } else {
+    // We must be on the browser
     return axios.create({
-      baseURL: '/',
-      headers: req.headers,
+      baseUrl: '/',
     });
   }
 };
-
-export default buildClient;
