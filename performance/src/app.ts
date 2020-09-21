@@ -2,7 +2,7 @@ import express from 'express';
 import 'express-async-errors';
 import mongoSanitize from 'express-mongo-sanitize';
 import helmet from 'helmet';
-import * as xss from 'xss-clean';
+import xss from 'xss-clean';
 import rateLimit from 'express-rate-limit';
 import hpp from 'hpp';
 
