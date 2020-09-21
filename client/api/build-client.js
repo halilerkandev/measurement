@@ -6,7 +6,7 @@ import axios from 'axios';
 const buildClient = ({ req }) => {
   if (typeof window === 'undefined') {
     return axios.create({
-      baseURL: 'www.measurement-app-prod.site/',
+      baseURL: 'http://www.measurement-app-prod.site/',
       headers: req.headers,
     });
   } else {
