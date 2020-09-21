@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: h3rk4nd/client
+          image: halilerkan/client
 ---
 apiVersion: v1
 kind: Service
